@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Side Navigation Bar</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <link rel="shortcut icon" href="../img/Logo final.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <img src="/img/Logo final.svg" alt="">
+      <ul>
+        <li><a href="index.html" onclick="mostrarSeccion('seccion1')"><i class="fas fa-home"></i>Incio</a></li>
+        <li><a href="Libros.html" onclick="mostrarSeccion('seccion3')"><i class="fa-solid fa-book-open"></i>Libros</a>
+        </li>
+        <li><a href="Posdcast.html" onclick="mostrarSeccion('seccion3')"><i class="fa-solid fa-podcast"></i>Podcast</a>
+        </li>
+        <li><a href="src/Videos.html" onclick="mostrarSeccion('seccion4')"><i class="fa-solid fa-video"></i>Videos</a>
+        </li>
+        <li><a href="src/Juegos.html" onclick="mostrarSeccion('seccion5')"><i class="fa-solid fa-dice"></i>Juegos</a>
+        </li>
+        <li><a href="src/Juegos.html" onclick="mostrarSeccion('seccion5')"><i class="fa-solid fa-dice"></i>Creditos</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main_content">
+
+      <div class="info" id="seccion1">
+
+        <div>
+          <div class="cat">
+            <video autoplay muted src="../Video/Inicio.mp4"></video>
+          </div>
+          <br>
+
+          <h1>CIBER ESPECTROS ANCESTRALES</h1>
+          <BR>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus
+          natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum
+          tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam
+          tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis
+          facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias
+          repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni
+          <br>
+          <br>
+          <div class="card-container">
+            <div class="card">
+              <img src="../img/Gameza_entrada.JPG" alt="">
+              <h2>Gameza</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+              <button id="openModal">Abrir Modal</button>
+
+              <!-- Modal -->
+              <div class="modal" id="myModal">
+                <div class="modal-content">
+                  <span class="modal-close" id="closeModal">&times;</span>
+                  <h2 class="modal-title">Título del Modalasd</h2>
+                  <h2 class="modal-title">Título del Modal2</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae doloribus explicabo voluptas quas
+                    quasi blanditiis incidunt rem quam enim beatae eius magni deserunt eveniet doloremque modi vero,
+                    saepe ad. Porro?</p>
+                  <img src="../img/LEYENDA.jpg" alt="">
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, earum deserunt nostrum adipisci
+                    neque repellendus quis maxime, libero inventore, alias beatae vel at laudantium quo repellat aliquam
+                    necessitatibus amet et.</p> <img src="https://placehold.co/200x50" alt="">
+
+                </div>
+              </div>
+
+
+            </div>
+            <div class="card">
+              <img src="../img/Panoramica_Sogamoso.JPG" alt="">
+              <h2>Sogamoso</h2>
+              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+              <button id="openModal2">Abrir Modal</button>
+
+              <!-- Modal -->
+              <div class="modal" id="myModal2">
+                <div class="modal-content">
+                  <span class="modal-close" id="closeModal2">&times;</span>
+                  <h2 class="modal-title">Título del Modal3</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae doloribus explicabo voluptas quas
+                    quasi blanditiis incidunt rem quam enim beatae eius magni deserunt eveniet doloremque modi vero,
+                    saepe ad. Porro?</p>
+                  <img src="../img/LEYENDA.jpg" alt="">
+
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, earum deserunt nostrum adipisci
+                    neque repellendus quis maxime, libero inventore, alias beatae vel at laudantium quo repellat aliquam
+                    necessitatibus amet et.</p> <img src="https://placehold.co/200x50" alt="">
+                </div>
+              </div>
+
+
+            </div>
+            <div class="card">
+              <img src="../img/Nobsa_Parque.JPG" alt="">
+              <h2>Nobsa</h2>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
+              <button id="openModal3">Abrir Modal</button>
+
+              <!-- Modal -->
+              <div class="modal" id="myModal3">
+                <div class="modal-content">
+                  <span class="modal-close" id="closeModal3">&times;</span>
+                  <h2 class="modal-title">Título del Moda3lasdasd</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae doloribus explicabo voluptas quas
+                    quasi blanditiis incidunt rem quam enim beatae eius magni deserunt eveniet doloremque modi vero,
+                    saepe ad. Porro?</p>
+                  <img src="https://placehold.co/50x50" alt="">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, earum deserunt nostrum adipisci
+                    neque repellendus quis maxime, libero inventore, alias beatae vel at laudantium quo repellat aliquam
+                    necessitatibus amet etc..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../Js/Modal.js"></script>
+    <script src="../Js/app.js"></script>
+</body>
+
+</html>
