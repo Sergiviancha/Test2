@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Side Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="shortcut icon" href="../img/Logo final.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <img src="/img/Logo final.svg" alt="">
+            <ul>
+                <li><a href="index.html" onclick="mostrarSeccion('seccion1')"><i class="fas fa-home"></i>Incio</a>
+                </li>
+                <li><a href="Libros.html" onclick="mostrarSeccion('seccion3')"><i
+                            class="fa-solid fa-book-open"></i>Libros</a>
+                </li>
+                <li><a href="Posdcast.html" onclick="mostrarSeccion('seccion3')"><i
+                            class="fa-solid fa-podcast"></i>Podcast</a></li>
+                <li><a href="Videos.html" onclick="mostrarSeccion('seccion4')"><i
+                            class="fa-solid fa-video"></i>Videos</a></li>
+                <li><a href="Juegos.html" onclick="mostrarSeccion('seccion5')"><i
+                            class="fa-solid fa-dice"></i>Juegos</a>
+                </li>
+                <li><a href="Juegos.html" onclick="mostrarSeccion('seccion5')"><i
+                            class="fa-solid fa-dice"></i>Creditos</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main_content">
+
+            <div class="info" id="seccion1">
+
+                <div>
+                    <div class="cat">
+                        <video autoplay muted src="../Video/videos.mp4"></video>
+                    </div>
+                    <br>
+                    <br>
+                    <h1>Contenido multimedia</h1>
+                    <BR>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque
+                    accusamus
+                    natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat
+                    illum
+                    tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad,
+                    veniam
+                    <br>
+                    <br>
+                    <div class="gallery">
+                        <div class="video">
+                            <video src="../Video/Video de WhatsApp 2024-05-20 a las 15.49.53_a14acfa5.mp4" controls
+                                autoplay></video>
+                            <h3>Hola como estas soy un titulo</h3>
+                            <p>Descripción breve del Video 1.</p>
+                        </div>
+                        <div class="video">
+                            <video src="../Video/Video de WhatsApp 2024-05-20 a las 15.49.53_f83e2fe5.mp4"
+                                controls></video>
+                            <h3>Título del Video 2</h3>
+                            <p>Descripción breve del Video 2.</p>
+                        </div>
+                        <!-- Agrega más videos aquí -->
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="../Js/JavaScript.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Side Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="shortcut icon" href="../img/Logo final.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        .book {
+            width: 400px;
+            height: 300px;
+            position: relative;
+        }
+
+        .pages {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .page {
+            width: 380px;
+            height: 270px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 7mm;
+            margin: 0 6px;
+            transform-style: preserve-3d;
+            transform-origin: left;
+            transition: 0.25s;
+            box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.15),
+                1px 3px 1px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .page-side {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 20px 30px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            font-family: poppins;
+            border-radius: 7mm;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+        }
+
+        .page-head {
+            width: 100%;
+        }
+
+        .page-title {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        .page-subtitle {
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        .page-content {
+            flex-grow: 1;
+            font-size: 14px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .page-footer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .pg-no {
+            width: 14px;
+            padding: 0 15px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: rgb(40, 40, 40);
+            background: white;
+            border-radius: 3mm;
+        }
+
+        .front {
+            background: rgb(255, 228, 130);
+            color: rgb(40, 40, 40);
+            padding-left: 40px;
+        }
+
+        .back {
+            background: rgb(40, 40, 40);
+            color: white;
+            padding-right: 40px;
+            transform: rotateY(180deg);
+        }
+
+        .beads {
+            position: absolute;
+            top: 0;
+            left: -12px;
+            height: 270px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            z-index: 9999;
+        }
+
+        .bead {
+            width: 36px;
+            height: 12px;
+            background: white;
+            border-radius: 5mm;
+            z-index: 9999;
+            box-shadow: inset 1px 2px 0 0 rgba(0, 0, 0, 0.15),
+                inset 1px 3px 1px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .controls {
+            width: 350px;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .controls button {
+            background: white;
+            width: 40px;
+            height: 40px;
+            border: 0.4mm solid rgb(40, 40, 40);
+            border-radius: 50%;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <img src="/img/Logo final.svg" alt="">
+            <ul>
+                <li><a href="index.html" onclick="mostrarSeccion('seccion1')"><i class="fas fa-home"></i>Incio</a>
+                </li>
+                <li><a href="Libros.html" onclick="mostrarSeccion('seccion3')"><i
+                            class="fa-solid fa-book-open"></i>Libros</a></li>
+                <li><a href="Posdcast.html" onclick="mostrarSeccion('seccion3')"><i
+                            class="fa-solid fa-podcast"></i>Podcast</a></li>
+                <li><a href="Videos.html" onclick="mostrarSeccion('seccion4')"><i
+                            class="fa-solid fa-video"></i>Videos</a></li>
+                <li><a href="Juegos.html" onclick="mostrarSeccion('seccion5')"><i
+                            class="fa-solid fa-dice"></i>Juegos</a>
+                </li>
+                <li><a href="Juegos.html" onclick="mostrarSeccion('seccion5')"><i
+                            class="fa-solid fa-dice"></i>Creditos</a>
+                </li>
+
+        </div>
+
+
+        <div class="main_content">
+
+            <div class="info">
+
+                <div>
+                    <div class="cat">
+                        <video autoplay muted src="../Video/Libros.mp4"></video>
+                    </div>
+                    <br>
+                    <br>
+                    <h1>Libros</h1>
+                    <BR>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque
+                    accusamus
+                    natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat
+                    illum
+                    tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad,
+                    veniam
+                    <br>
+                    <br>
+                    <div class="card-container">
+                        <div class="card">
+                            <h3>Card 2 </h3>
+                            <img src="https://placehold.co/1000x800" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta impedit fugit illo quasi
+                                tempore corporis officia tenetur eaque optio cupiditate rerum nostrum ipsam, obcaecati
+                                magnam reiciendis alias? Aliquam, molestias aspernatur..</p>
+
+                            <button id="openModal4">Abrir Modal</button>
+
+                            <!-- Modal -->
+                            <div class="modal" id="myModal4">
+                                <div class="modal-content">
+                                    <span class="modal-close" id="closeModal4">&times;</span>
+                                    <h2 class="modal-title">Título del Libro1</h2>
+                                    <div class="container" id="container">
+                                        <div class="book-content">
+                                            <div class="book">
+                                                <div class="face-front" id="portada"></div>
+                                                <div class="face-back" id="trsf">
+                                                    <h1>Title 1</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Quisquam laborum voluptatibus eaque repudiandae ullam
+                                                        necessitatibus, dolor ad expedita, eum praesentium vitae!
+                                                        Voluptate in itaque modi consequatur. Aliquid odit quisquam
+                                                        quibusdam!</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="book">
+                                                <div class="face-front">
+                                                    <h1>Title 2</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+                                                        perferendis nemo blanditiis impedit aut soluta quia illum
+                                                        deserunt, vero quod ducimus placeat voluptate quidem error
+                                                        sequi, earum eos minima in!</p>
+                                                </div>
+                                                <div class="face-back">
+                                                    <h1>Title 3</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Quisquam laborum voluptatibus eaque repudiandae ullam
+                                                        necessitatibus, dolor ad expedita, eum praesentium vitae!
+                                                        Voluptate in itaque modi consequatur. Aliquid odit quisquam
+                                                        quibusdam!</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="book">
+                                                <div class="face-front">
+                                                    <h1>Title 4</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+                                                        perferendis nemo blanditiis impedit aut soluta quia illum
+                                                        deserunt, vero quod ducimus placeat voluptate quidem error
+                                                        sequi, earum eos minima in!</p>
+                                                </div>
+                                                <div class="face-back">
+                                                    <h1>Title 5</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Quisquam laborum voluptatibus eaque repudiandae ullam
+                                                        necessitatibus, dolor ad expedita, eum praesentium vitae!
+                                                        Voluptate in itaque modi consequatur. Aliquid odit quisquam
+                                                        quibusdam!</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="book">
+                                                <div class="face-front">
+                                                    <h1>Title 6</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+                                                        perferendis nemo blanditiis impedit aut soluta quia illum
+                                                        deserunt, vero quod ducimus placeat voluptate quidem error
+                                                        sequi, earum eos minima in!</p>
+                                                </div>
+                                                <div class="face-back" id="portada-back">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Card 2</h3>
+                            <img src="https://placehold.co/1000x800" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta impedit fugit illo
+                                quasi
+                                tempore corporis officia tenetur eaque optio cupiditate rerum nostrum ipsam,
+                                obcaecati
+                                magnam reiciendis alias? Aliquam, molestias aspernatur..</p>
+                            <button id="openModal5">Abrir Modal</button>
+
+                            <!-- Modal -->
+                            <div class="modal" id="myModal5">
+                                <div class="modal-content">
+                                    <span class="modal-close" id="closeModal5">&times;</span>
+                                    <h2 class="modal-title">Título del libro 4</h2>
+                                    <div class="container" id="container">
+                                        <div class="book-content">
+                                            <div class="book">
+                                                <div class="face-front" id="portada"></div>
+                                                <div class="face-back" id="trsf">
+                                                    <h1>Title 1</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Quisquam laborum voluptatibus eaque repudiandae ullam
+                                                        necessitatibus, dolor ad expedita, eum praesentium vitae!
+                                                        Voluptate in itaque modi consequatur. Aliquid odit quisquam
+                                                        quibusdam!</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="book">
+                                                <div class="face-front">
+                                                    <h1>Title 2</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+                                                        perferendis nemo blanditiis impedit aut soluta quia illum
+                                                        deserunt, vero quod ducimus placeat voluptate quidem error
+                                                        sequi, earum eos minima in!</p>
+                                                </div>
+                                                <div class="face-back">
+                                                    <h1>Title 3</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Quisquam laborum voluptatibus eaque repudiandae ullam
+                                                        necessitatibus, dolor ad expedita, eum praesentium vitae!
+                                                        Voluptate in itaque modi consequatur. Aliquid odit quisquam
+                                                        quibusdam!</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="book">
+                                                <div class="face-front">
+                                                    <h1>Title 4</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+                                                        perferendis nemo blanditiis impedit aut soluta quia illum
+                                                        deserunt, vero quod ducimus placeat voluptate quidem error
+                                                        sequi, earum eos minima in!</p>
+                                                </div>
+                                                <div class="face-back">
+                                                    <h1>Title 5</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                        Quisquam laborum voluptatibus eaque repudiandae ullam
+                                                        necessitatibus, dolor ad expedita, eum praesentium vitae!
+                                                        Voluptate in itaque modi consequatur. Aliquid odit quisquam
+                                                        quibusdam!</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="book">
+                                                <div class="face-front">
+                                                    <h1>Title 6</h1>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+                                                        perferendis nemo blanditiis impedit aut soluta quia illum
+                                                        deserunt, vero quod ducimus placeat voluptate quidem error
+                                                        sequi, earum eos minima in!</p>
+                                                </div>
+                                                <div class="face-back" id="portada-back">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Card 3</h3>
+                            <img src="https://placehold.co/1000x800" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta impedit fugit illo
+                                quasi
+                                tempore corporis officia tenetur eaque optio cupiditate rerum nostrum ipsam,
+                                obcaecati
+                                magnam reiciendis alias? Aliquam, molestias aspernatur..</p>
+                            <button id="openModal6">Abrir Modal</button>
+
+                            <!-- Modal -->
+                            <div class="modal" id="myModal6">
+                                <div class="modal-content">
+                                    <span class="modal-close" id="closeModal6">&times;</span>
+                                    <h2 class="modal-title">Título del Libro 3</h2>
+                                    <div class="container" id="container">
+                                        <div class="book">
+                                            <div class="pages">
+                                                <div class="beads">
+                                                    <div class="bead"></div>
+                                                    <div class="bead"></div>
+                                                    <div class="bead"></div>
+                                                    <div class="bead"></div>
+                                                </div>
+
+                                                <div class="page active">
+                                                    <div class="page-side front">
+                                                        <div class="page-head">
+                                                            <div class="page-title">
+
+                                                                <span class="material-icons-outlined"></span>
+                                                            </div>
+                                                            <div class="page-subtitle"></div>
+                                                        </div>
+                                                        <div class="page-content">
+                                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Necessitatibus iusto adipisci ad nobis omnis ipsam, porro
+                                                            aperiam exercitationem eum quas sint facilis nihil possimus
+                                                            qui?
+                                                        </div>
+                                                        <div class="page-footer">
+                                                            <span>May 2023</span>
+                                                            <span class="pg-no">1</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="page-side back">
+                                                        <div class="page-head">
+                                                            <div class="page-title">
+                                                                Movies
+                                                                <span class="material-icons-outlined">theaters</span>
+                                                            </div>
+                                                            <div class="page-subtitle">Client Name</div>
+                                                        </div>
+                                                        <div class="page-content">
+                                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Necessitatibus iusto adipisci ad nobis omnis ipsam, porro
+                                                            aperiam exercitationem eum quas sint facilis nihil possimus
+                                                            qui?
+                                                        </div>
+                                                        <div class="page-footer">
+                                                            <span>May 2023</span>
+                                                            <span class="pg-no">2</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="page">
+                                                    <div class="page-side front">
+                                                        <div class="page-head">
+                                                            <div class="page-title">
+                                                                Music
+                                                                <span class="material-icons-outlined"> music_note
+                                                                </span>
+                                                            </div>
+                                                            <div class="page-subtitle">Client Name</div>
+                                                        </div>
+                                                        <div class="page-content">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Maiores
+                                                            modi temporibus tempora eligendi consectetur harum
+                                                            recusandae
+                                                            rem exercitationem molestias? Dolorum itaque ducimus quam
+                                                            odio
+                                                            unde
+                                                        </div>
+                                                        <div class="page-footer">
+                                                            <span>May 2023</span>
+                                                            <span class="pg-no">3</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="page-side back">
+                                                        <div class="page-head">
+                                                            <div class="page-title">
+                                                                Games
+                                                                <span class="material-icons-outlined"> sports_esports
+                                                                </span>
+                                                            </div>
+                                                            <div class="page-subtitle">Client Name</div>
+                                                        </div>
+                                                        <div class="page-content">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Maiores
+                                                            modi temporibus tempora eligendi consectetur harum
+                                                            recusandae
+                                                            rem exercitationem molestias? Dolorum itaque ducimus quam
+                                                            odio
+                                                            unde
+                                                        </div>
+                                                        <div class="page-footer">
+                                                            <span>May 2023</span>
+                                                            <span class="pg-no">4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="page">
+                                                    <div class="page-side front">
+                                                        <div class="page-head">
+                                                            <div class="page-title">
+                                                                News
+                                                                <span class="material-icons-outlined"> feed </span>
+                                                            </div>
+                                                            <div class="page-subtitle">Client Name</div>
+                                                        </div>
+                                                        <div class="page-content">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Maiores
+                                                            modi temporibus tempora eligendi consectetur harum
+                                                            recusandae
+                                                            rem exercitationem molestias? Dolorum itaque ducimus quam
+                                                            odio
+                                                            unde
+                                                        </div>
+                                                        <div class="page-footer">
+                                                            <span>May 2023</span>
+                                                            <span class="pg-no">5</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="page-side back">
+                                                        <div class="page-head">
+                                                            <div class="page-title">
+                                                                Education
+                                                                <span class="material-icons-outlined"> school </span>
+                                                            </div>
+                                                            <div class="page-subtitle">Client Name</div>
+                                                        </div>
+                                                        <div class="page-content">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                            Maiores
+                                                            modi temporibus tempora eligendi consectetur harum
+                                                            recusandae
+                                                            rem exercitationem molestias? Dolorum itaque ducimus quam
+                                                            odio
+                                                            unde
+                                                        </div>
+                                                        <div class="page-footer">
+                                                            <span>May 2023</span>
+                                                            <span class="pg-no">6</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="page"></div>
+                                            </div>
+                                        </div>
+                                        <div class="controls">
+                                            <button type="button" class="btn" onclick="previous()">
+                                                <span class="material-icons-outlined">arrow_back</span>
+                                            </button>
+                                            <button type="button" class="btn" onclick="next()">
+                                                <span class="material-icons-outlined">arrow_forward</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Agrega más cards aquí -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Obtener elementos del DOM 4
+        const modal4 = document.getElementById("myModal4");
+        const btnOpenModal4 = document.getElementById("openModal4");
+        const btnCloseModal4 = document.getElementById("closeModal4");
+
+        // Abrir modal al hacer clic en el botón
+        btnOpenModal4.addEventListener("click", () => {
+            modal4.style.display = "block";
+        });
+
+        // Cerrar modal al hacer clic en la "X"
+        btnCloseModal4.addEventListener("click", () => {
+            modal4.style.display = "none";
+        });
+
+        // Obtener elementos del DOM 5
+        const modal5 = document.getElementById("myModal5");
+        const btnOpenModal5 = document.getElementById("openModal5");
+        const btnCloseModal5 = document.getElementById("closeModal5");
+
+        // Abrir modal al hacer clic en el botón
+        btnOpenModal5.addEventListener("click", () => {
+            modal5.style.display = "block";
+        });
+
+        // Cerrar modal al hacer clic en la "X"
+        btnCloseModal5.addEventListener("click", () => {
+            modal5.style.display = "none";
+        });
+
+        // Obtener elementos del DOM 5
+        const modal6 = document.getElementById("myModal6");
+        const btnOpenModal6 = document.getElementById("openModal6");
+        const btnCloseModal6 = document.getElementById("closeModal6");
+
+        // Abrir modal al hacer clic en el botón
+        btnOpenModal6.addEventListener("click", () => {
+            modal6.style.display = "block";
+        });
+
+        // Cerrar modal al hacer clic en la "X"
+        btnCloseModal6.addEventListener("click", () => {
+            modal6.style.display = "none";
+        });
+        function setIndex() {
+            let pages = document.querySelectorAll(".page");
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.zIndex = pages.length - i;
+            }
+        }
+
+        setIndex();
+
+        function previous() {
+            let active = document.querySelector(".active");
+            let prevSib = active.previousElementSibling;
+            active.className = "page";
+            prevSib.className = "page active";
+            setIndex();
+            prevSib.style.transform = "rotateY(0deg)";
+            let prevSib2 = prevSib.previousElementSibling;
+            if (prevSib2 && prevSib2.className == "page") {
+                prevSib2.style.zIndex = "9998";
+            }
+        }
+
+        function next() {
+            let active = document.querySelector(".active");
+            let nextSib = active.nextElementSibling;
+            active.style.transform = "rotateY(180deg)";
+            active.className = "page";
+            setIndex();
+            active.style.zIndex = "9998";
+            if (nextSib) {
+                nextSib.className = "page active";
+            }
+        }
+    </script>
+    <script src="../Js/app.js"></script>
+</body>
+
+</html>
